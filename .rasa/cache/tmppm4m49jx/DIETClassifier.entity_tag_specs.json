@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-crypto",
+      "2": "I-crypto",
+      "3": "L-crypto",
+      "4": "U-crypto",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-crypto": 1,
+      "I-crypto": 2,
+      "L-crypto": 3,
+      "U-crypto": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

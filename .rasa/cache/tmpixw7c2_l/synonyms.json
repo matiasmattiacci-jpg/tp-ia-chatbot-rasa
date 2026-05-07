@@ -1,0 +1,10 @@
+{
+  "bitcoin": "bitcoin",
+  "ethereum": "ethereum",
+  "solana": "solana",
+  "btc": "btc",
+  "eth": "eth",
+  "ada": "ada",
+  "dot": "dot",
+  "usdt": "usdt"
+}
