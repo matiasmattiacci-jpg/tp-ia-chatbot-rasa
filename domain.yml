@@ -1,33 +1,48 @@
+#Aquí es donde debemos registrar todo lo que definimos anteriormente en el NLU para que Rasa sepa que existen y cómo debe responder.
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
+  - saludar
+  - despedirse
+  - afirmar
+  - negar
+  - consultar_precio
+  - preguntar_bienestar
   - bot_challenge
+  - fuera_de_tema
+
+entities:
+  - crypto
+
+slots:
+  crypto:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: crypto
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saludar:
+    - text: "¡Hola! Soy tu asistente virtual de finanzas. Puedo darte el precio de criptomonedas en tiempo real. ¿Sobre cuál querés consultar?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_despedirse:
+    - text: "¡Hasta luego! Espero haberte ayudado con tus inversiones."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
+  utter_preguntar_bienestar:
+    - text: "¡Muy bien! Siempre atento al mercado. ¿Y vos cómo estás?"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Soy un bot especializado en criptomonedas, programado para este trabajo práctico."
+
+  utter_fuera_de_tema:
+    - text: "Por ahora mi fuerte son las finanzas y las criptomonedas. ¿Te gustaría saber el precio de algún activo?"
+
+  utter_consultar_precio_placeholder:
+    - text: "Entendido, estoy buscando el valor actual..."
+
+actions:
+  - action_consultar_precio
 
 session_config:
   session_expiration_time: 60
