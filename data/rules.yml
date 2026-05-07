@@ -2,12 +2,37 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Saludar siempre que el usuario inicie
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: saludar
+  - action: utter_saludar
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Despedirse siempre que el usuario se despida
+  steps:
+  - intent: despedirse
+  - action: utter_despedirse
+
+- rule: Responder al desafío del bot (identificación)
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Responder a preguntas de bienestar (Chit-chat)
+  steps:
+  - intent: preguntar_bienestar
+  - action: utter_preguntar_bienestar
+
+- rule: Manejar temas fuera de contexto (Chit-chat/Interrupción)
+  steps:
+  - intent: fuera_de_tema
+  - action: utter_fuera_de_tema
+
+- rule: Ejecutar consulta de precio en la API
+  steps:
+  - intent: consultar_precio
+  - action: action_consultar_precio
+
+- rule: Manejo de Fallback (No-input o No entendido)
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fuera_de_tema
