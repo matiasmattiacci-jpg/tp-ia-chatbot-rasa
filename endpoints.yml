@@ -10,6 +10,9 @@
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
+## Este endpoint permite la comunicación entre el núcleo de Rasa y el servidor de acciones (Action Server).
+# Es indispensable para ejecutar el código Python en 'actions.py', permitiendo que el bot
+# realice consultas dinámicas a la API de CoinGecko y procese lógica compleja.
 action_endpoint:
   url: "http://localhost:5055/webhook"
 
