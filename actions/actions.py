@@ -1,3 +1,7 @@
+#Servidor de Acciones Personalizadas: Su función principal es gestionar la lógica de negocio fuera del flujo 
+#conversacional, permitiendo la integración con la API de CoinGecko para 
+#obtener cotizaciones de criptomonedas en tiempo real.
+
 from typing import Any, Text, Dict, List
 import requests
 from rasa_sdk import Action, Tracker
