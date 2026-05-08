@@ -1,9 +1,11 @@
 #Aquí es donde debemos registrar todo lo que definimos anteriormente en el NLU para que Rasa sepa que existen y cómo debe responder.
+#Curiosidad: Si ponés varias opciones de texto bajo la misma respuesta, Rasa elige una al azar. Esto evita que el bot parezca un disco rayado.
 version: "3.1"
 
 intents:
   - saludar
   - despedirse
+  - agradecer
   - afirmar
   - negar
   - consultar_precio
@@ -25,12 +27,20 @@ slots:
 responses:
   utter_saludar:
     - text: "¡Hola! Soy tu asistente virtual de finanzas. Puedo darte el precio de criptomonedas en tiempo real. ¿Sobre cuál querés consultar?"
+    - text: "¡Hola! Soy tu asistente de criptos. ¿Qué moneda estás siguiendo hoy?"
+    - text: "¡Buenas! Acá firme analizando el mercado. ¿De qué cripto querés saber el precio?"
 
   utter_despedirse:
     - text: "¡Hasta luego! Espero haberte ayudado con tus inversiones."
+  
+  utter_agradecer:
+    - text: "¡De nada! Si necesitás otro valor, avisame."
+    - text: "¡Un placer! ¿Alguna otra moneda que quieras consultar?"
 
   utter_preguntar_bienestar:
     - text: "¡Muy bien! Siempre atento al mercado. ¿Y vos cómo estás?"
+    - text: "¡Todo tranqui por acá, viendo cómo suben y bajan las velas! ¿Vos qué tal?"
+    - text: "¡Muy bien! Siempre listo para el mercado. ¿Y vos, cómo va todo?"
 
   utter_iamabot:
     - text: "Soy un bot especializado en criptomonedas, programado para este trabajo práctico."

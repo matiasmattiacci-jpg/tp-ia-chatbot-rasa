@@ -1,5 +1,5 @@
 version: "3.1"
-
+# Agregar variaciones ayuda a que paresca menos rigido y a que entienda mejor lo que el usuario quiere decir, aunque no lo diga exactamente igual a los ejemplos.
 nlu:
 - intent: saludar
   examples: |
@@ -38,6 +38,15 @@ nlu:
     - no quiero
     - paso
 
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - gracias che
+    - joya, gracias
+    - espectacular
+    - mil gracias
+
 - intent: consultar_precio
   examples: |
     - ¿A cuánto está el [bitcoin](crypto)?
@@ -49,6 +58,11 @@ nlu:
     - pasame el precio de [dot](crypto)
     - quiero saber el valor de una moneda
     - cotización de [usdt](crypto)
+    - ¿cómo viene el [btc](crypto)?
+    - tirame el precio de [eth](crypto)
+    - decime la cotización de [sol](crypto)
+    - ¿a cuánto cotiza [usdc](crypto) hoy?
+    - precio de [matic](crypto)
 
 - intent: preguntar_bienestar
   examples: |

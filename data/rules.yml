@@ -36,3 +36,8 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_fuera_de_tema
+
+- rule: Responder a agradecimientos
+  steps:
+  - intent: agradecer
+  - action: utter_agradecer

@@ -10,7 +10,7 @@ stories:
   - intent: consultar_precio
   - action: action_consultar_precio
   - intent: afirmar
-  - action: utter_saludar
+  - action: utter_agradecer
   - intent: despedirse
   - action: utter_despedirse
 
@@ -23,4 +23,26 @@ stories:
   - intent: consultar_precio
   - action: action_consultar_precio
   - intent: despedirse
+  - action: utter_despedirse
+
+- story: consulta y agradecimiento
+  steps:
+  - intent: consultar_precio
+  - action: action_consultar_precio
+  - intent: agradecer
+  - action: utter_agradecer
+
+- story: bienestar y agradecimiento
+  steps:
+  - intent: preguntar_bienestar
+  - action: utter_preguntar_bienestar
+  - intent: afirmar
+  - intent: agradecer
+  - action: utter_agradecer
+
+- story: usuario no quiere mas consultas
+  steps:
+  - intent: consultar_precio
+  - action: action_consultar_precio
+  - intent: negar
   - action: utter_despedirse
